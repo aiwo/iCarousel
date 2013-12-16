@@ -1660,11 +1660,11 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
     {
         if (distance > 0.0f)
         {
-            _endOffset = ceilf(_startOffset);
+            _endOffset = floorf(_startOffset);
         }
         else
         {
-            _endOffset = floorf(_startOffset);
+            _endOffset = ceilf(_startOffset);
         }
     }
     else if (_stopAtItemBoundary)
